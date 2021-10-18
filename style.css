@@ -24,7 +24,8 @@ body
 }
 .main
 {
-    position: relative;
+    position: fixed;
+    top: 50%;
     transform: rotate(45deg);
 }
 .serce
