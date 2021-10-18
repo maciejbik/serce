@@ -1,0 +1,96 @@
+:root
+{
+    --heart-color: #D4BAA3;
+    --background-color-1: #C76912;
+    --background-color-2: #CF6B0E;
+    --heart-size: 20vh;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    animation-name: background;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.header{
+    font-size: 1.7vh;
+    text-align: center;
+    position: fixed;
+    top: 20%;
+}
+.main
+{
+    position: relative;
+    transform: rotate(45deg);
+}
+.serce
+{
+    animation-name: bije;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+    width: var(--heart-size);
+    height: var(--heart-size);
+    background: var(--heart-color);
+    position: relative;
+}
+.right
+{
+    border-radius: 50%;
+    width: var(--heart-size);
+    height: var(--heart-size);
+    background: var(--heart-color);
+    position: absolute;
+    top: -50%;
+}
+.left
+{
+    border-radius: 50%;
+    width: var(--heart-size);
+    height: var(--heart-size);
+    background: var(--heart-color);
+    position: absolute;
+    left: -50%;
+}
+@keyframes background 
+{
+    0%
+    {
+        background-color: var(--background-color-1);
+    }
+    50%
+    {   
+        background-color: var(--background-color-2);
+    }
+    100%
+    {
+        background-color: var(--background-color-1);
+    }
+}
+@keyframes bije
+{
+    0%
+    {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50%
+    {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+}
+
+
+
+
+
